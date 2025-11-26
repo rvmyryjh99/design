@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperial Prime Interiors - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Imperial Prime Interiors</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Image Carousel -->
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="curt3.jpg"  alt="Elegant Living Room Design">
+                <div class="carousel-caption">
+                    <h2>Transform Your Space</h2>
+                    <p>Premium interior solutions for homes and offices</p>
+                    <a href="services.html" class="btn">Our Services</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+
+                <img src="curt9.jpg" alt="Custom Curtain Installation">
+                <div class="carousel-caption">
+                    <h2>Custom Window Treatments</h2>
+                    <p>Beautiful curtains and mosquito nets tailored to your space</p>
+                    <a href="services.html" class="btn">Our Services</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img scr="mosq1.jpg"
+               
+                <div class="carousel-caption">
+                    <h2>mosquito nets </h2>
+                    <a href="services.html" class="btn">Our Services</a>
+                </div>
+            </div>
+            
+            <!-- <div class="carousel-slide">
+                <video controls>
+                    <source src="vid2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="carousel-caption">
+                    <h2>Our Work in Action</h2>
+                    <p>See how we transform spaces</p>
+                    <a href="services.html" class="btn">Our Services</a>
+                </div>
+            </div> -->
+        </div>
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="container">
+            <h2>Welcome to Imperial Prime Interiors</h2>
+            <p>We specialize in creating beautiful, functional spaces with premium curtains, mosquito nets, nettings, and furniture. Our team of experts has been transforming homes and offices since 2005, delivering quality craftsmanship and exceptional customer service.</p>
+            <div class="cta-buttons">
+                <a href="services.html" class="btn primary">Explore Our Services</a>
+                <a href="contact.html" class="btn secondary">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-ruler-combined"></i>
+                    <h3>Custom Solutions</h3>
+                    <p>Every project is tailored to your specific needs and preferences.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <h3>Premium Quality</h3>
+                    <p>We use only the finest materials for lasting beauty and durability.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>Timely Delivery</h3>
+                    <p>We respect your time and complete projects within agreed timelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Imperial Prime Interiors</h3>
+                    <p>Transforming spaces with premium interior solutions since 2005.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Imperial Prime Interiors. Developed by Muwesi Moses </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentSlide = 0;
+            
+            function showSlide(n) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                indicators.forEach(indicator => indicator.classList.remove('active'));
+                
+                currentSlide = (n + slides.length) % slides.length;
+                
+                slides[currentSlide].classList.add('active');
+                indicators[currentSlide].classList.add('active');
+            }
+            
+            // Auto-advance slides
+            setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
+            
+            // Indicator click events
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
