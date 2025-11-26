@@ -716,3 +716,30 @@ footer {
         font-size: 1.8rem;
     }
 }
+.whatsapp-btn {
+    background-color: #25D366 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-whatsapp {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: white;
+}
+
+.whatsapp-note {
+    margin-top: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
